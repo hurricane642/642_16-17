@@ -66,7 +66,6 @@ class ball():
 
     def hittest(self,ob):
         """ Функция проверяет сталкивалкивается ли данный обьект с целью, описываемой в обьекте ob.
-
         Args:
             ob: Обьект, с которым проверяется столкновение.
         Returns:
@@ -192,9 +191,11 @@ def new_game(event=''):
             if b.hittest(t1) and t1.live:
                 t1.live = 0
                 t1.hit()
+                t1.y=1000
             if b.hittest(t2) and t2.live:
                 t2.live = 0
                 t2.hit()
+                t2.y=1000
             if(t1.live==t2.live==0):
                 canv.bind('<Button-1>', '')
                 canv.bind('<ButtonRelease-1>', '')
@@ -210,4 +211,3 @@ def new_game(event=''):
 new_game()
 
 mainloop()
-
