@@ -130,6 +130,7 @@ class target():
         self.points = 0
         self.live = 2
         self.vy = 10
+        self.vx=7
         self.id = canv.create_oval(0,0,0,0)
         self.id_points = canv.create_text(30,30,text = self.points,font = '28')
         self.new_target()
@@ -151,8 +152,11 @@ class target():
         canv.itemconfig(self.id_points, text = self.points)
     def targetmove(self):
         self.y+=self.vy
+        self.x+=self.vx
         if (self.y>=600)or (self.y<=0):
             self.vy=-self.vy
+        if (self.x>=800)or (self.x<=0):
+            self.vx=-self.vx
         self.setcoords()
 
 
