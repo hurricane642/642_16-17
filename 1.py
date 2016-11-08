@@ -1,3 +1,5 @@
-a=[]
-a = list(map(int, input().split()))
-print(a[ : :2])
+A = set('bqlpzlkwehrlulsdhfliuywemrlkjhsdlfjhlzxcovt')
+B = set('zmxcvnboaiyerjhbziuxdytvasenbriutsdvinjhgik')
+for x in A:
+    if not (x in B):
+        print(x)
